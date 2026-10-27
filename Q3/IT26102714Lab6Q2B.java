@@ -1,13 +1,22 @@
+import java.util.Scanner;
 public class IT26102714Lab6Q2B {
     public static void main(String[] args) {
-        for (int i = 1; i <= 5; i++) {
-            System.out.print(i + " - ");
+        Scanner input = new Scanner(System.in);
 
-            for (int j = 1; j <= i; j++) {
-                System.out.print("* ");
-            }
+        int[] numbers = new int[10];
 
-            System.out.println();
+        System.out.println("Please enter 10 numbers:");
+
+        for (int i = 0; i < 10; i++) {
+            System.out.print("Enter number " + (i + 1) + ": ");
+            numbers[i] = input.nextInt();
         }
-    }
+
+        System.out.println("\nThe numbers you entered are:");
+
+        for (int i = 0; i < 10; i++) {
+            System.out.print(numbers[i] + " ");
+        }
+		
+	}
 }
